@@ -18,7 +18,6 @@ months.splice(0,1)
 console.log(months);
 
 
-
 let months2 = ['Jan', 'March', 'April', 'June']
 let months3 = months2;
 //No se crea un nuevo array, se crea una referencia a este array
@@ -35,3 +34,12 @@ months4.push("hola")
 console.log(months4) //["hola", "mundo"]
 console.log(months5) // ['Jan', 'March', 'April', 'June']
 
+
+//La funcion filter tiene por parametros, el current value, el index y el array en el que se esta iterando
+
+const monthsFiltered =  months.filter( function( month, index, a ){
+    console.log(month, index, a , "arguments")
+    return month.toLocaleLowerCase().includes('a');
+});
+
+console.log(monthsFiltered)
